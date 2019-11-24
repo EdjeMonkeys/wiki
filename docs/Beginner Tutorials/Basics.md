@@ -1,20 +1,21 @@
 # Basics 
 
-**NOTICE: A lot of the content on this page is not up-to-date and refers to an older version of the game.**
+**The goal of the game is to not die! You die when your core reaches 0 health.** These are cores:
 
-**The goal of the game is to not die! You die when your core reaches 0 health.** This is your core:
+<img src="https://i.imgur.com/tAKePzo.png" width=60% height=60%>
 
-<img src="https://i.imgur.com/HOiVEDe.png" width=20% height=20%>
+In campaign, there is one per map that you must defend at all costs.
 
 Start by getting ore. Copper should be priority #1, for you only need copper to build the first drill tier and conveyors. 
 
+<img src="https://i.imgur.com/amp6PsQ.png">
+
 1. Mine with your Mech (see [this](##Mech-Mining))
-2. Mine with a drill (you start with 0 copper, so you will need to get 45 copper to get your first drill + conveyors)
-3. Let your spirit drone mine Copper for you (see Spirit Drone on this page)
+2. Mine with a drill (you start with some copper, so you will be able to build a Mechanical Drill right away)
 
-Once you have a good Copper income, you can mine Lead. Lead can be mined with the tier 1 drill as well. 
+Once you have a good Copper income, you can mine Lead. Lead is the used, like copper, to build basic machines. Lead can be mined with the Mechanical Drill as well. 
 
-After lead, Dense Alloy should be produced. Please see Advanced Concepts for the materials processing of Dense Alloy, Silicone, Titanium, Thorium, Plastanium, Phase Fabric, and Surge Alloy. 
+<img src="https://i.imgur.com/chVhhNv.png">
 
 ## Input / Output Basics
 
@@ -22,11 +23,17 @@ Here are a few basics / tips to understanding block input/output behaviors.
 
 **1. Conveyors moving away from a production block will be output.** 
 
-<img src="https://i.imgur.com/D5Wwe3B.png" width=40%>
+<img src="https://i.imgur.com/0tDHAwS.png">
 
-This drill will mine and put ore on all conveyors that take the ore away from the drill. In this example, the drill will put Lead on all 7 conveyors, but not the eight one because that conveyor moves towards the drill. The drill will prioritize each path evenly. If a path is blocked, it is not considered as an output.
+This drill has **one** output conveyer. **All** of the materials this drill mines will be deposited onto this conveyer.
 
-Notice that a conveyor moving into the Core deposits the material into the core inventory. Once a material is in the Core inventory, you can use it to build immediately, regardless of location. 
+<img src="https://i.imgur.com/YgUdz6u.png">
+
+This drill has **eight** output conveyers. The materials mined by this drill will be deposited **evenly** onto all eight.
+
+<img src="https://i.imgur.com/XOc4gRt.png">
+
+Here is an example of collecting resources from multiple drills and depositing them in the core. The conveyer moving into to the core is an **input** conveyer. We will talk about this in the next section. Once a material is in the Core inventory, you can use it to build immediately, regardless of location. 
 
 **2. Conveyors moving towards a block will be an input for the block (only if applicable).** 
 
